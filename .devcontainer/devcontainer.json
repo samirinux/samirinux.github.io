@@ -4,6 +4,9 @@
   "onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "remoteUser": "vscode",
   "updateRemoteUserUID": true,
+  "mounts": [
+        "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+    ],
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "customizations": {
     "vscode": {
